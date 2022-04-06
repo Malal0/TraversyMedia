@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&display=swap');
 
+:root {
+
+    --greyish: rgb(215, 215, 215);
+
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -7,6 +13,14 @@
     font-family: 'Open Sans', sans-serif;
 
     box-sizing: border-box;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.8em;
 }
 
 .header-container {
@@ -21,7 +35,13 @@
 .search-input {
     padding: .75em;
     border-radius: 5px;
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--greyish);
+}
+
+.search-input:focus,
+.search-input:hover {
+    border: 1px solid #67b0ff;
+    outline: none;
 }
 
 .container {
@@ -31,7 +51,7 @@
 }
 
 .card-body {
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--greyish);
     border-radius: 4px;
     margin: 1em;
     padding: 1em;
@@ -52,20 +72,33 @@
     color: white;
 }
 
-/*.title{
+.title {
+    margin: .75em 0 .25em 0;
+}
 
-}*/
+#item {
+    border: 1px solid var(--greyish);
+    border-radius: 5px;
+    padding: .75em;
+}
+
+#item:focus,
+#item:hover {
+    border: 1px solid #67b0ff;
+    outline: none;
+}
 
 #items {
-    border: 1px solid rgba(0, 0, 0, 0.25);
+    border: 1px solid var(--greyish);
     border-radius: 5px;
 }
 
 #items>* {
     padding: 1em;
-    border: .5px solid rgba(0, 0, 0, 0.25);
+    border: .5px solid var(--greyish);
     display: flex;
     justify-content: space-between;
+    align-items: baseline;
 }
 
 .red-btn {
